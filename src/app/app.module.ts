@@ -7,6 +7,7 @@ import { LoginComponent } from './login/login.component';
 //import { ToastrModule } from 'ngx-toastr';
 //import { FormsModule }   from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import { HttpClientModule } from '@angular/common/http';
     AppRoutingModule,
     //ToastrModule.forRoot(),
     HttpClientModule,
+    ReactiveFormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

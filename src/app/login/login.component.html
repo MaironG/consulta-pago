@@ -1,17 +1,25 @@
-  
-<img src="/assets/usuario.png" class="mx-auto d-block">
-<form class="mb-4" autocomplete="off" >
+<div #div1 class="col-md-4 container">
+<img src="/assets/usuario.png" class="col-md-4 avatar">
+<form class="mb-4" autocomplete="off" [formGroup]="form" (ngSubmit)="save($event)">
   <div class="form-group">
-    <label>Username</label>
-    <input class="form-control" name="UserName" required>
+    <label>Usuario</label>
+    <input class="form-control" 
+            name="UserName" 
+            placeholder="Nombre de usuario"
+            formControlName="usuario">
   </div>
   <div class="form-group">
-    <label>Password</label>
-    <input type="password" class="form-control" name="Password" required>
+    <label>contraseña</label>
+    <input type="password" 
+            class="form-control" 
+            name="Password" 
+            placeholder="Digita tu contraseña"
+            formControlName="password">
   </div>
   <div class="form-row">
     <div class="form-group col-md-8 offset-md-2">
-      <button type="submit" class="btn btn-lg btn-block" >Login</button>
+      <button type="submit" class="btn btn-lg btn-block" [disabled]="form.invalid">Login</button>
     </div>
   </div>
 </form>
+</div>

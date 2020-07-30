@@ -1,26 +1,27 @@
 body{
-    background-color: #04c582;;
+    background-color: #00c9e3;;
 }
 
 input.form-control,input.form-control:focus{
-    background-color: #636b7b;
-    color: #fff;
-    border: 1px solid #636b7b;
+    background-color: #fdfdfd;
+    color: #0a0a0a;
+    border: 1px solid #fdfdfd;
 
 }
 
 input.form-control:focus{
     box-shadow: none;
+    color: #030303;
 }
 
 button[type=submit].btn{
     border-radius: 20px;
-    background-color: #04c582;
+    background-color: #070707;
     color: #fff;
 }
 
 div.form-group label:not(.text-danger){
-    color: #545d6a;
+    color: #030303;
     font-weight: 700;
 }
 
@@ -92,3 +93,15 @@ div.form-group.required>label:first-child:after{
     text-transform: uppercase;
     font-size: 0.9rem;
  }
+
+ img.avatar {
+    display:block;
+    margin:auto;
+    width: 60%;
+    height: 60%;
+    border-radius: 20%;
+  }
+
+  div.container{
+    padding-top: 80px; 
+  }
