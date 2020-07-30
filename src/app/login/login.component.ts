@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ApiLoginService } from '../services/api-login.service';
 import { FormControl, FormGroup, Validators, FormBuilder} from '@angular/forms';
+import { DataApi } from '../interface/data-api';
+
 
 
 
@@ -12,15 +14,18 @@ import { FormControl, FormGroup, Validators, FormBuilder} from '@angular/forms';
 export class LoginComponent implements OnInit  {
 
   form: FormGroup;
+  noticias: DataApi[]=[];
 
-  constructor(private fb: FormBuilder) {
+  constructor(private fb: FormBuilder, private servicio: ApiLoginService) {
     this.buildForm();
    }
+   
+  ngOnInit(){
 
- 
-ngOnInit(){
-
-  }
+    this.servicio.getUser().subscribe(resp =>{
+      console.log('noticias', resp);
+  });
+}
 
   private buildForm() {
     this.form = new FormGroup({
@@ -40,5 +45,6 @@ ngOnInit(){
     const value = this.form.value;
     console.log(value);
   }
- 
-}}
+}
+
+}
