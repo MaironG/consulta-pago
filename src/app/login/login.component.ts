@@ -22,7 +22,7 @@ export class LoginComponent implements OnInit  {
    
   ngOnInit(){
 
-    this.servicio.getUser().subscribe(resp =>{
+    this.servicio.getUser(3,"mmarinez").subscribe(resp =>{
       console.log('noticias', resp);
   });
 }
